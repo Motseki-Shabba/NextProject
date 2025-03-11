@@ -1,6 +1,6 @@
 "use client";
 
-import { Dumbbell, Users, Timer, Trophy, Link } from "lucide-react";
+import { Dumbbell, Users, Timer, Trophy } from "lucide-react";
 import styles from "./page.module.css";
 import { useRouter } from "next/navigation";
 
