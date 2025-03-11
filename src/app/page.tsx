@@ -20,7 +20,7 @@ export default function HomePage() {
             <div className={styles.navButtons}>
               <button
                 className={styles.secondaryButton}
-                onClick={() => router.push("/component/Login")}
+                onClick={() => router.push("/components/login")}
               >
                 Login
               </button>

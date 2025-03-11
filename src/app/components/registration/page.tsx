@@ -5,7 +5,9 @@ import {
   useTrainerState,
 } from "@/app/Providers/Registration/provider";
 import { useState } from "react";
-import styles from "./RegisterTrainerForm.module.css";
+import styles from "./styles/RegisterTrainerForm.module.css";
+import Link from "next/link";
+import router, { useRouter } from "next/router";
 
 export default function RegisterTrainerForm() {
   const { registerTrainer } = useTrainerActions();
@@ -40,9 +42,14 @@ export default function RegisterTrainerForm() {
     e.preventDefault();
     registerTrainer(formData);
   };
+  // const router = useRouter();
 
   return (
     <div className={styles.container}>
+      <div>
+        <Link href="/registration">back</Link>
+      </div>
+
       <h2 className={styles.title}>Register as Trainer</h2>
 
       <form onSubmit={handleSubmit} className={styles.form}>

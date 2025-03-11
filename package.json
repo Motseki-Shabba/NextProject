@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "antd": "^5.24.3",
     "axios": "^1.8.2",
     "input": "^1.0.1",
     "lucide-react": "^0.479.0",
