@@ -26,7 +26,7 @@ export default function HomePage() {
               </button>
               <button
                 className={styles.primaryButton}
-                onClick={() => router.push("/component/Registration")}
+                onClick={() => router.push("/components/registration")}
               >
                 Register
               </button>
