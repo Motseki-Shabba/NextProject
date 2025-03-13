@@ -41,8 +41,7 @@ Copyfusionfit/├── app/
 # Page routes and layouts├── components/          
 # Reusable interface elements│   ├── auth/            
 # Login/registration elements│   ├── CreateClient/    
-# Client management interfaces│   ├── FoodItems/       
-# Nutrition tracking components│   └── policy/          
+# Client management interfaces│   ├── FoodItems/                
 # Terms and conditions modules├── providers/           
 # State management contexts├── public/              
 # Static resources├── styles/              
