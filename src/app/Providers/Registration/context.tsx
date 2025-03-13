@@ -1,4 +1,3 @@
-
 "use client";
 import { createContext } from "react";
 
@@ -41,7 +40,8 @@ export const INITIAL_STATE: ITrainerStateContext = {
 };
 
 // Create two separate contexts
-export const TrainerStateContext = createContext<ITrainerStateContext>(INITIAL_STATE);
+export const TrainerStateContext =
+  createContext<ITrainerStateContext>(INITIAL_STATE);
 export const TrainerActionContext = createContext<ITrainerActionContext>({
   registerTrainer: () => {},
 });

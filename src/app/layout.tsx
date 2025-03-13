@@ -4,6 +4,8 @@ import "./globals.css";
 import { TrainerProvider } from "./Providers/Registration/provider";
 import { LoginProvider } from "./Providers/Login/provider";
 import { UserProvider } from "./Providers/CurrentUser/provider";
+import { ClientProvider } from "./Providers/CreateClient/provider";
+// import { ClientRegistrationProvider } from "./Providers/ClientRegistration/provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,7 +32,9 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <TrainerProvider>
           <LoginProvider>
-            <UserProvider>{children}</UserProvider>
+            <UserProvider>
+              <ClientProvider>{children}</ClientProvider>
+            </UserProvider>
           </LoginProvider>
         </TrainerProvider>
       </body>

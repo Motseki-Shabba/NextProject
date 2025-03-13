@@ -7,7 +7,6 @@ import {
 import { useState } from "react";
 import styles from "./styles/RegisterTrainerForm.module.css";
 import Link from "next/link";
-import router, { useRouter } from "next/router";
 
 export default function RegisterTrainerForm() {
   const { registerTrainer } = useTrainerActions();

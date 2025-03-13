@@ -15,21 +15,20 @@ export default function LoginForm() {
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
   const { loginUser } = useLoginActions();
-  const { isPending, isSuccess, isError, isAuthenticated, message } =
-    useLoginState();
+  const { isPending, isError, isAuthenticated, message } = useLoginState();
 
   const router = useRouter();
 
-  const validationRules = {
-    email: {
-      required: true,
-      pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-    },
-    password: {
-      required: true,
-      minLength: 6,
-    },
-  };
+  // const validationRules = {
+  //   email: {
+  //     required: true,
+  //     pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+  //   },
+  //   password: {
+  //     required: true,
+  //     minLength: 6,
+  //   },
+  // };
 
   useEffect(() => {
     if (isAuthenticated) {

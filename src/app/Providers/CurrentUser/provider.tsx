@@ -30,7 +30,7 @@ export const UserProvider = ({ children }: { children: React.ReactNode }) => {
     dispatch(getCurrentUserPending());
 
     // Get token from localStorage
-    const token = localStorage.getItem("authToken");
+    const token = sessionStorage.getItem("authToken");
 
     if (!token) {
       dispatch(getCurrentUserError("No authentication token found"));
@@ -70,7 +70,7 @@ export const UserProvider = ({ children }: { children: React.ReactNode }) => {
 
       // If unauthorized (401), clear token
       if (error.response?.status === 401) {
-        localStorage.removeItem("authToken");
+        sessionStorage.removeItem("authToken");
       }
     }
   };
