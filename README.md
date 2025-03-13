@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Boxfusion Fitness
+Project Overview
+FusionFit is a comprehensive Next.js application designed to connect personal trainers with their clients through a feature-rich platform for nutrition planning and fitness management. The system enables efficient client management, customized meal planning, and detailed food item tracking.
+Key Capabilities
+The platform offers distinct experiences for two user types:
+For Fitness Professionals:
+Simple trainer registration and secure login
+Comprehensive client profile management
+Custom meal plan creation and assignment
+Extensive food database management
+Intuitive dashboard interface
+For Clients:
+Streamlined registration through trainer invitation
+Secure access to personal dashboard
+Easy viewing of assigned nutrition plans
+Mobile-responsive design for on-the-go access
+Technology Foundation
+Core Framework: Next.js with App Router architecture
+Interface Design: Ant Design component library
+Data Management: Context API paired with useReducer
+Backend Communication: Axios for API integration
+Security: JWT-based authentication system
+Development Setup
+System Requirements
+Node.js (v16+)
+Package manager (npm/yarn)
+Local Installation
+Get the codebase:
+Copygit clone https://github.com/yourusername/fusionfit.gitcd fusionfit
+Set up dependencies:
+Copynpm install
+Configure environment: Create .env.local with:
+CopyNEXT_PUBLIC_API_URL=https://body-vault-server-b9ede5286d4c.herokuapp.com
+Launch development server:
+Copynpm run dev
+Visit http://localhost:3000 to view the application
+Codebase Organization
+Copyfusionfit/├── app/                 # Page routes and layouts├── components/          # Reusable interface elements│   ├── auth/            # Login/registration elements│   ├── CreateClient/    # Client management interfaces│   ├── FoodItems/       # Nutrition tracking components│   └── policy/          # Terms and conditions modules├── providers/           # State management contexts├── public/              # Static resources├── styles/              # Global styling└── utils/               # Helper functions
+API Endpoints
+The platform connects to a comprehensive backend with endpoints including:
+User Management: Registration, authentication, and profile access
+Client Operations: Profile creation and management
+Nutrition Database: Food item retrieval, categorization, and creation
+Meal Planning: Plan creation, assignment, and retrieval
+Project Context
+This application represents a graduate-level frontend project demonstrating proficiency in modern React development practices, API integration patterns, state management techniques, and secure authentication implementation.
