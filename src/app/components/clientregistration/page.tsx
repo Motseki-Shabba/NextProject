@@ -4,7 +4,7 @@ import {
   useClientRegistrationState,
   useClientRegistrationActions,
 } from "@/app/Providers/clientregistration/provider";
-import { UserPlus, Loader2, CheckCircle, AlertCircle } from "lucide-react";
+import { Loader2, CheckCircle, AlertCircle } from "lucide-react";
 import styles from "./RegisterClient.module.css";
 
 const RegisterClient: React.FC = () => {

@@ -42,7 +42,7 @@ export default function Dashboard() {
 
     // Fetch current user data
     getCurrentUser();
-  }, [isAuthenticated, router]);
+  }, [isAuthenticated, router, getCurrentUser]);
 
   const handleLogout = () => {
     logoutUser();

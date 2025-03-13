@@ -33,11 +33,12 @@ const CreateClientForm: React.FC = () => {
   });
 
   // Load user data when component mounts
+  // Load user data when component mounts
   useEffect(() => {
     if (!userState.user) {
       getCurrentUser();
     }
-  }, []);
+  }, [getCurrentUser, userState.user]);
 
   // Reset form after successful submission
   useEffect(() => {
@@ -52,7 +53,7 @@ const CreateClientForm: React.FC = () => {
         trainerId: userState.user?.id || "",
       });
     }
-  }, [isSuccess]);
+  }, [isSuccess, userState.user]);
 
   const validateForm = () => {
     let valid = true;

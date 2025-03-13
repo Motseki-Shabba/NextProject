@@ -29,7 +29,13 @@ export const ClientProvider = ({ children }: { children: React.ReactNode }) => {
   const createClient = async (clientData: IClient) => {
     dispatch(createClientPending());
 
-    // Get token from localStorage
+    // Validate clientData
+    if (!clientData.fullName || !clientData.email) {
+      dispatch(createClientError("Client name and email are required"));
+      return;
+    }
+
+    // Get token from sessionStorage
     const token = sessionStorage.getItem("authToken");
 
     if (!token) {
@@ -58,16 +64,8 @@ export const ClientProvider = ({ children }: { children: React.ReactNode }) => {
         const errorMessage = responseData.message || "Failed to create client";
         dispatch(createClientError(errorMessage));
       }
-    } catch (error: any) {
-      console.error(error);
-      const errorMessage =
-        error.response?.data?.message || "Failed to create client";
-      dispatch(createClientError(errorMessage));
-
-      // If unauthorized (401), clear token
-      if (error.response?.status === 401) {
-        sessionStorage.removeItem("authToken");
-      }
+    } catch (error) {
+      console.error("Error creating client:", error);
     }
   };
 

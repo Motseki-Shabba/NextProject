@@ -1,12 +1,11 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   useClientLoginState,
   useClientLoginActions,
 } from "@/app/Providers/ClientLogin/provider";
 import { LogIn, Loader2, CheckCircle, AlertCircle } from "lucide-react";
 import styles from "./Login.module.css";
-import router from "next/router";
 
 const Login: React.FC = () => {
   const { isPending, isSuccess, isError, message } = useClientLoginState();
@@ -143,7 +142,7 @@ const Login: React.FC = () => {
       </form>
 
       <div className={styles.registerLink}>
-        Don't have an account? <a href="/register">Sign up</a>
+        Do not have an account? <a href="/register">Sign up</a>
       </div>
     </div>
   );

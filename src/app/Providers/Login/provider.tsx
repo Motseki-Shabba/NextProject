@@ -48,7 +48,7 @@ export const LoginProvider = ({ children }: { children: React.ReactNode }) => {
 
         // Set authorization header for future requests
         axiosInstance.defaults.headers.common["Authorization"] = token;
-      } catch (error) {
+      } catch {
         // If there's an error parsing the stored user, clear local storage
         sessionStorage.removeItem("authToken");
         sessionStorage.removeItem("user");
@@ -95,11 +95,10 @@ export const LoginProvider = ({ children }: { children: React.ReactNode }) => {
         const errorMessage = responseData.message || "Login failed";
         dispatch(loginUserError(errorMessage));
       }
-    } catch (error: any) {
-      console.error(error);
-      const errorMessage = error.response?.data?.message || "Login failed";
-      dispatch(loginUserError(errorMessage));
-    } finally {
+    } catch (error: unknown) {
+      if (error instanceof Error) console.error(error);
+      // const errorMessage = error.response?.data?.message || "Login failed";
+      // dispatch(loginUserError(errorMessage));
     }
   };
 
