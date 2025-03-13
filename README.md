@@ -1,8 +1,8 @@
 🌟 Boxfusion Fitness
-📋 Project Overview
+📋 **Project Overview**
 Boxfusion Fitness is a comprehensive Next.js application designed to connect personal trainers with their clients through a feature-rich platform for nutrition planning and fitness management. The system enables efficient client management, customized meal planning, and detailed food item tracking.
 
-🏋️‍♂️ Key Capabilities
+🏋️‍♂️ **Key Capabilities**
 The platform offers distinct experiences for two user types:
 👨‍💼 For Fitness Professionals:
 Simple trainer registration and secure login
@@ -15,7 +15,7 @@ Extensive food database management
 
 Intuitive dashboard interface
 
-👩‍💻 For Clients:
+👩‍💻 **For Clients:**
 Streamlined registration through trainer invitation
 
 Secure access to personal dashboard
@@ -24,7 +24,7 @@ Easy viewing of assigned nutrition plans
 
 Mobile-responsive design for on-the-go access
 
-🧱 Technology Foundation
+🧱 **Technology Foundation**
 Core Framework: Next.js with App Router architecture
 
 Interface Design: Ant Design component library
@@ -35,7 +35,7 @@ Backend Communication: Axios for API integration
 
 Security: JWT-based authentication system
 
-🛠️ Development Setup
+🛠️ **Development Setup**
 System Requirements
 Node.js (v16+)
 
@@ -46,7 +46,7 @@ Get the codebase:
 
 bash
 git clone https://github.com/yourusername/fusionfit.git
-cd fusionfit
+cd project
 Set up dependencies:
 
 bash
@@ -72,7 +72,8 @@ fusionfit/
 ├── public/              # Static resources
 ├── styles/              # Global styling
 └── utils/               # Helper functions
-🔗 API Endpoints
+
+🔗 **API Endpoints**
 The platform connects to a comprehensive backend with endpoints including:
 
 User Management: Registration, authentication, and profile access
