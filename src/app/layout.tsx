@@ -5,6 +5,8 @@ import { TrainerProvider } from "./Providers/Registration/provider";
 import { LoginProvider } from "./Providers/Login/provider";
 import { UserProvider } from "./Providers/CurrentUser/provider";
 import { ClientProvider } from "./Providers/CreateClient/provider";
+import { ClientRegistrationProvider } from "./Providers/clientregistration/provider";
+import { ClientLoginProvider } from "./Providers/ClientLogin/provider";
 // import { ClientRegistrationProvider } from "./Providers/ClientRegistration/provider";
 
 const geistSans = Geist({
@@ -33,7 +35,11 @@ export default function RootLayout({
         <TrainerProvider>
           <LoginProvider>
             <UserProvider>
-              <ClientProvider>{children}</ClientProvider>
+              <ClientProvider>
+                <ClientRegistrationProvider>
+                  <ClientLoginProvider>{children}</ClientLoginProvider>
+                </ClientRegistrationProvider>
+              </ClientProvider>
             </UserProvider>
           </LoginProvider>
         </TrainerProvider>
