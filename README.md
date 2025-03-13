@@ -83,17 +83,17 @@ Visit http://localhost:3000 to view the application.
 
 
 🗂️ **Codebase Organization**
-bash
-fusionfit/
-├── app/                 # Page routes and layouts
-├── components/          # Reusable interface elements
-│   ├── auth/            # Login/registration elements
-│   ├── CreateClient/    # Client management interfaces
-│   ├── FoodItems/       # Food-related interfaces
-├── providers/           # State management contexts
-├── public/              # Static resources
-├── styles/              # Global styling
-└── utils/               # Helper functions
+
+
+        ├── app/                 # Page routes and layouts
+        ├── components/          # Reusable interface elements
+        │   ├── auth/            # Login/registration elements
+        │   ├── CreateClient/    # Client management interfaces
+        │   ├── FoodItems/       # Food-related interfaces
+        ├── providers/           # State management contexts
+        ├── public/              # Static resources
+        ├── styles/              # Global styling
+        └── utils/               # Helper functions
 
 
 
