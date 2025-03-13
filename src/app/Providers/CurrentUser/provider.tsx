@@ -30,7 +30,7 @@ export const UserProvider = ({ children }: { children: React.ReactNode }) => {
     dispatch(getCurrentUserPending());
 
     // Get token from localStorage
-    const token = localStorage.getItem("authToken");
+    const token = sessionStorage.getItem("authToken");
 
     if (!token) {
       dispatch(getCurrentUserError("No authentication token found"));
@@ -62,15 +62,18 @@ export const UserProvider = ({ children }: { children: React.ReactNode }) => {
           responseData.message || "Failed to retrieve user data";
         dispatch(getCurrentUserError(errorMessage));
       }
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error(error);
       const errorMessage =
-        error.response?.data?.message || "Failed to retrieve user data";
+        (error as { response?: { data?: { message?: string } } }).response?.data
+          ?.message || "Failed to retrieve user data";
       dispatch(getCurrentUserError(errorMessage));
 
       // If unauthorized (401), clear token
-      if (error.response?.status === 401) {
-        localStorage.removeItem("authToken");
+      if (
+        (error as { response?: { status?: number } }).response?.status === 401
+      ) {
+        sessionStorage.removeItem("authToken");
       }
     }
   };

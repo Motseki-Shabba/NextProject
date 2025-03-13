@@ -45,7 +45,18 @@ export default function HomePage() {
               Get personalized workout plans and nutrition advice from certified
               trainers. Start your fitness journey today.
             </p>
-            <button className={styles.primaryButton}>Start Free Trial</button>
+            <button
+              className={styles.secondaryButton}
+              onClick={() => router.push("/components/clientregistration")}
+            >
+              Register as a client
+            </button>
+            <button
+              className={styles.primaryButton}
+              onClick={() => router.push("/components/ClientLogin")}
+            >
+              Login as a client
+            </button>
           </div>
         </div>
       </section>
@@ -88,7 +99,7 @@ export default function HomePage() {
             <span>Boxfusion Fitness</span>
           </div>
           <p className={styles.copyright}>
-            © 2025 Boxfusion Fitness. Motseki Tshabalala
+            © 2024 Boxfusion Fitness. All rights reserved.
           </p>
         </div>
       </footer>
